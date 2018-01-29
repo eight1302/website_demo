@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述...">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<title>主页</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-size: 15px;
+			font-family:"Microsoft yahei";
+		}
+		.head{
+			width: 100%;
+			height: 180px;
+			background: #ff4200;
+		}
+	   .top{
+			width: 100%;
+			background: black;
+			height: 60px;
+			position: absolute;
+		}
+		.fixed{
+			position: fixed;
+			top: 0;
+		}
+
+		.main{
+			width: 1210px;
+			margin: 0 auto;
+		}
+		.logo{
+			width: 103px;
+			height: 28px;
+			margin-top:16px;
+			float: left;
+		}
+		.nav_bar{
+			width: 600px;
+			float: left;
+			height: 60px;
+			margin-left: 150px;
+		}
+		.nav_bar ul li{
+			list-style-type: none;
+			float: left;
+			line-height: 60px;
+			text-align: center;
+			width:100px;
+		}
+		.nav_bar ul li a{
+			color: #ffffff;
+			text-decoration: none;
+			display: block;
+		}
+		.nav_bar>ul>li:hover{
+			background: #00cece;
+		}
+		.nav_bar ul li.l1:hover .hid{
+			display: block;
+		}
+		.hid{
+			width: 100%;
+			height: 60px;
+			background: #00cece;
+			position: absolute;
+			left: 0;
+			display: none;
+		}
+		.hid ul{
+			width: 1210px;
+			margin: 0 auto;
+		}
+		.login{
+			float: right;
+			width: 120px;
+			height: 30px;
+			margin-top:15px; 
+		}
+		.login a{
+			width: 55px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			display: block;
+			float: left;
+			color: #fff;
+			border: 1px solid #666;
+			text-decoration:none;
+		}
+		.login a.a1:hover{
+			background: #5580fb;
+		}
+		.login a.a2{
+			background: #5580fb;
+		}
+		.q1{
+			width: 100%;
+			height: 700px;
+			background: pink;
+			margin-top:60px; 
+		}
+		.q2{
+			width: 100%;
+			height: 500px;
+			background: #422455;
+		}
+		.q3{
+			width: 100%;
+			height: 900px;
+			background: orange;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		
+	</div>
+	<div class="top">
+		<div class="main">
+			<div class="logo">
+				<img src="images/logo.png" alt="">
+			</div>
+			<div class="nav_bar">
+				<ul>
+					<li><a href="">首页</a></li>
+					<li class="l1">
+						<a href="">产品</a>
+						<div class="hid">
+							<ul>
+								<li><a href="">一级</a></li>
+								<li><a href="">二级</a></li>
+								<li><a href="">三级</a></li>
+								<li><a href="">四级</a></li>
+								<li><a href="">五级</a></li>
+								<li><a href="">六级</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="">案例</a></li>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">招聘</a></li>
+					<li><a href="">关于我们</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<a href="" class="a1">登陆</a>
+				<a href="" class="a2">注册</a>
+			</div>
+		</div>
+	</div>
+	<div class="q1"></div>
+	<div class="q2"></div>
+	<div class="q3"></div>
+	<script type="text/javascript">
+		var head=$(".head").height();
+		$(window).scroll(function(){
+			var topScr=$(window).scrollTop();
+			if (topScr>head) {
+				$(".top").addClass("fixed");
+			}else{
+				$(".top").removeClass("fixed");
+			}
+		})
+	</script>
+</body>
+</html>
