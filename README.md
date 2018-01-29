@@ -1,3 +1,3 @@
 # website_demo
 官网模板
-website_demo/website/index.html
+https://eight1302.github.io/website_demo/website/index.html
